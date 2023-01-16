@@ -1,0 +1,14 @@
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
+INFO:root:Executing function generate_random
+ERROR:root:Something goes wrong: TypeError('can only concatenate str (not "int") to str')
