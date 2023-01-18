@@ -1,0 +1,2 @@
+Translate es una herramienta de traducción simple pero poderosa escrita en python con soporte para múltiples proveedores de traducción. 
+A estas alturas, ofrecemos integración con Microsoft Translation API, Translated MyMemory API, LibreTranslate y las API gratuitas y profesionales de DeepL
