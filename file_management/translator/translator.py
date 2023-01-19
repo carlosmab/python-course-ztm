@@ -11,4 +11,11 @@ with open("translation.txt", mode="w") as f:
     f.write(translated_text)
     
 print(translated_text)
-    
+
+import requests
+from bs4 import BeautifulSoup
+
+
+res = requests.get("https://news.ycombinator.com/news")
+soup = BeautifulSoup(res.text, 'html.parser')
+print(soup.body)
