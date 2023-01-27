@@ -14,3 +14,10 @@ for prediction, probability in zip(predictions, probabilities):
     print(f'{prediction} : {probability}')
 
 
+ storeAccount.getAccountById()
+    .then((result)=> {
+        //logic if success
+    }).catch((error) => {
+        //logic if error
+    }) 
+
