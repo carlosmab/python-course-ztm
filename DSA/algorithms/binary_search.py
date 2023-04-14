@@ -6,12 +6,7 @@
 # Best O(1) 
 # Worst O(log(n))
 
-#               10
-#           /       \
-#       4               15
-#         \           /   \ 
-#           8
-#        6
+
 
 import random     
 from functools import cache   
@@ -45,14 +40,14 @@ def insert_node(node: Node, new_node: Node):
 
 class BinaryTree:
     def __init__(self, value: int):
-        self.head: Node = Node(value)
+        self.root: Node = Node(value)
     
     def add_value(self, value):
         new_node = Node(value)
-        insert_node(self.head, new_node)
+        insert_node(self.root, new_node)
     
     def lookup(self, value):
-        current_node = self.head
+        current_node = self.root
         while current_node:
             if value == current_node.value:
                return f"found {current_node.value}"
@@ -66,19 +61,19 @@ class BinaryTree:
         raise NotImplementedError("Code not found")
         
     def print_tree(self):
-        print(self.head)
-        
-
-bt = BinaryTree(500000)
+        print(self.root)
 
 
-with timer("insertion"):
-    for _ in range(1000000):
-        bt.add_value(random.randint(0, 1000000))
+if __name__ == "__main__":
+    
+    bt = BinaryTree(500000)
+    
+    with timer("insertion"):
+        for _ in range(1000000):
+            bt.add_value(random.randint(0, 1000000))
 
-
-with timer("binary search"):
-    print(bt.lookup(10))
+    with timer("binary search"):
+        print(bt.lookup(10))
 
     
                 
