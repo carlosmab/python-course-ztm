@@ -6,7 +6,7 @@ from performance import timer
 from binary_search import BinaryTree, Node
 
 
-def breadthFirstSearch(tree: BinaryTree) -> list:
+def breadth_first_search(tree: BinaryTree) -> list:
     current_node: Node = tree.root
     search_list: list = []
     queue: list = []
@@ -23,7 +23,7 @@ def breadthFirstSearch(tree: BinaryTree) -> list:
     return search_list
 
 
-def breadthFirstSearchRecursive(queue: list = [], search_list: list = []) -> list:
+def breadth_first_search_recursive(queue: list = [], search_list: list = []) -> list:
     if not queue: return search_list
     
     current_node = queue.pop(0)
@@ -33,7 +33,7 @@ def breadthFirstSearchRecursive(queue: list = [], search_list: list = []) -> lis
         queue.append(current_node.left)
     if current_node.right:
         queue.append(current_node.right)
-    return breadthFirstSearchRecursive(queue, search_list)
+    return breadth_first_search_recursive(queue, search_list)
 
 
 if __name__ == "__main__":
@@ -46,11 +46,11 @@ if __name__ == "__main__":
     bt.add_value(1)
 
     with timer("BFS"):
-        print(breadthFirstSearch(bt))
+        print(breadth_first_search(bt))
         
     with timer("\nRecursive"):
         queue = [bt.root]
-        print(breadthFirstSearchRecursive(queue, []))
+        print(breadth_first_search_recursive(queue, []))
 
     # to return BFS [9, 4, 20, 1, 6, 15, 170]
         
